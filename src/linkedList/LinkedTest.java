@@ -16,7 +16,11 @@ public class LinkedTest {
         list.addToFront(marySmith);
         list.addToFront(mikeWilson);
 
+        list.removeFromFront();
+
         list.printList();
 
+        System.out.println(list.getSize());
+        System.out.println(list.isEmpty());
     }
 }
