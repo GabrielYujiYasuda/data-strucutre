@@ -1,5 +1,7 @@
 package heashtables;
 
+import java.util.HashMap;
+
 public class HashTest {
     public static void main(String[] args) {
 
