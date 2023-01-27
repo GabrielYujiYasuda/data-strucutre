@@ -6,6 +6,6 @@ This is some of what I have been learning about DATA STRUCTURE in JAVA
 - Stacks
 - Queues
 - Hashtables
-- Search Algorithms
+- Binary Search
 - Trees
 - Heaps
