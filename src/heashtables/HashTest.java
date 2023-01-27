@@ -13,7 +13,7 @@ public class HashTest {
 
         ht.put("Yasuda", gabriel);
         ht.put("Cardoso", laura);
-        ht.put("bjj", roger);
+        ht.put("Gracie", roger);
         ht.put("Poe", edgar);
 
         ht.printHashtable();

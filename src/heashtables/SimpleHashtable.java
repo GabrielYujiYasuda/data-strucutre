@@ -10,7 +10,21 @@ public class SimpleHashtable {
     public void put(String key, EmployeeHash employee) {
         int hashedKey = hashKey(key);
 
-        if (hashtable[hashedKey] != null) {
+        if (occupied(hashedKey)) {
+            int stopIndex = hashedKey;
+
+            if (hashedKey == hashtable.length - 1) {
+                hashedKey = 0;
+            } else {
+                hashedKey++;
+            }
+
+            while (occupied(hashedKey) && hashedKey != stopIndex) {
+                hashedKey = (hashedKey + 1) % hashtable.length;
+            }
+        }
+
+        if (occupied(hashedKey)) {
             System.out.println("Sorry, there's an employee at position " + hashedKey);
         } else {
             hashtable[hashedKey] = employee;
@@ -22,9 +36,12 @@ public class SimpleHashtable {
 
         return hashtable[hashedKey];
     }
-
     private int hashKey(String key) {
         return key.length() % hashtable.length;
+    }
+
+    private boolean occupied(int index) {
+        return hashtable[index] != null;
     }
 
     public void printHashtable() {
